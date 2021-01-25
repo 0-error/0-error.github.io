@@ -1,8 +1,8 @@
 ---
 layout: post
-title: python 字典，元组，列表的区别
+title: python
 categories: python
-description: python 字典，元组，列表的区别
+description: python
 keywords: python
 ---
 
