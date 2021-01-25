@@ -2,7 +2,7 @@
 #   Main Configs   #
 # ---------------- #
 baseurl:
-url: https://github.com/0-error
+url: https://0-error.github.io
 date_format: "ordinal"
 title: IsaBlue's Blog
 subtitle: "Isab's blog"
