@@ -121,8 +121,8 @@ gitment:
 gitalk:
     owner: 0-error
     repo: blog-comments
-    clientID: 7a451b29b690cfdcb46d
-    clientSecret: 61cdf5b5fe77b5e4a22f59b49f51026e45d4e830
+    clientID: a3bca15c78547e2e54fe
+    clientSecret: 920f80ff3c875491ebee82d95d7c9ed86784a054
 # 在使用其它评论组件时可点击显示 Disqus
 lazy_load_disqus : false
 
