@@ -1,7 +1,7 @@
 ---
 layout: post
 title: python 字典，元组，列表的区别
-categories: 2016
+categories: python
 description: python 字典，元组，列表的区别
 keywords: python
 ---
