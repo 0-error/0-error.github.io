@@ -1,8 +1,8 @@
 ---
 layout: post
-title: python 中字符串 列表 字典 元组的区别
+title: python 字典，元组，列表的区别
 categories: 2016
-description: python 中字符串 列表 字典 元组的区别
+description: python 字典，元组，列表的区别
 keywords: python
 ---
 
