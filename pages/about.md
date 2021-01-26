@@ -36,5 +36,3 @@ permalink: /about/
 </div>
 {% endfor %}
 
-
-That's all
