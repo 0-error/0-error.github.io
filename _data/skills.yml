@@ -1,15 +1,11 @@
-- name: Information Security
+- name: Information Security Keywords
   keywords:
       - Web Penetration
+      - Android app analysis
       - Intranet penetration
-      - Threat Hunting
 
 - name: Software Engineer Keywords
   keywords:
       - Python
       - Java
 
-- name: Mobile Developer Keywords
-  keywords:
-      - Android
-      - Reverse Engineering
