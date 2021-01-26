@@ -1,18 +1,14 @@
 ---
 layout: page
 title: About
-description: 打码改变世界
-keywords: Zhuang Ma, 马壮
+description: Information Security
+keywords: Isab
 comments: true
 menu: 关于
 permalink: /about/
 ---
 
-我是马壮，码而生，码而立。
-
-仰慕「优雅编码的艺术」。
-
-坚信熟能生巧，努力改变人生。
+认识自己的过程总是伴随着一些不可思议，这种不可思议主要表现在前后的巨大反差上，比方说在做一件事情之前，我会觉得自己道理都懂，一旦出手必定手到擒来，但是一旦开始做了，却发现自己举步维艰，所知甚少。所以时常有人说，要知道自己是个什么样的人，就从此刻起做一件你此时认为不可能完成的事情。
 
 ## 联系
 
@@ -20,12 +16,6 @@ permalink: /about/
 {% for website in site.data.social %}
 <li>{{website.sitename }}：<a href="{{ website.url }}" target="_blank">@{{ website.name }}</a></li>
 {% endfor %}
-{% if site.url contains 'mazhuang.org' %}
-<li>
-微信公众号：<br />
-<img style="height:192px;width:192px;border:1px solid lightgrey;" src="{{ assets_base_url }}/assets/images/qrcode.jpg" alt="闷骚的程序员" />
-</li>
-{% endif %}
 </ul>
 
 
