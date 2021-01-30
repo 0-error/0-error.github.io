@@ -10,6 +10,7 @@ keywords: select, epoll , 区别
 socket编程并发处理的问题中，select和epoll函数的区别一直是面试中的重点。关于他俩的区别很多博客中已经说明了，我在这里总结一下。参考[select和epoll 原理概述&优缺点比较](https://blog.csdn.net/jiange_zh/article/details/50811553)以及[select、poll、epoll之间的区别总结[整理]](https://blog.csdn.net/qq546770908/article/details/53082870)
 
 ##select的过程
+
 调用select函数时到底发生了什么，即如何实现同时监听多个socket的。假设我们需要监听的读套接字read[]，它作为参数传递进了select函数。
 
     select(fd_set read[],fd_set [],fd_set [],timeout)
@@ -21,6 +22,7 @@ socket编程并发处理的问题中，select和epoll函数的区别一直是面
 5. 只要有事件触发，系统调用返回，将fd_set从内核空间拷贝到用户空间，回到用户态，用户就可以对相关的fd作进一步的读或者写操作了。
 
 ## epoll过程
+
 这里我就直接引用文章[select和epoll 原理概述&优缺点比较]((https://blog.csdn.net/jiange_zh/article/details/50811553)中的话。
 
 >调用epoll_create时，做了以下事情：
@@ -38,4 +40,5 @@ socket编程并发处理的问题中，select和epoll函数的区别一直是面
 总结一下，就是epoll不需要通过遍历的方式，而是在内核中建立了file节点，并且通过注册响应事件的方式，当有响应事件发生时采取相应的措施，并把准备就绪的事件放入链表中，从而epoll只关心链表中是否有数据即可。
 
 ##对比
+
 很明显，select的效率低于epoll，因为它需要大量拷贝fd_set，并且需要不断遍历监听列表，而epoll这种基于响应事件的方式明显会更具优势。
